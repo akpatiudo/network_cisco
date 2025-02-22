@@ -45,7 +45,7 @@ Since the ISP router provides internet access, we will assign public IP addresse
 -  ip address 203.0.113.1 255.255.255.0
 -  no shutdown
 -  exit
--  copy running-config startup-config (privileged mode)
+-  copy running-config startup-config (this will save the configurationn. make sure you are in privileged mode hit enter when it asked for destination file name)
 -  This means the ISP router gateway IP is 203.0.113.1.
 -   ![](https://i.imgur.com/yDDwQE7.png)
 
