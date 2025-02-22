@@ -45,7 +45,7 @@ Since the ISP router provides internet access, we will assign public IP addresse
 -  ip address 203.0.113.1 255.255.255.0
 -  no shutdown
 -  exit
-This means the ISP router gateway IP is 203.0.113.1.
+-  This means the ISP router gateway IP is 203.0.113.1.
 -   ![](https://i.imgur.com/yDDwQE7.png)
 
 ###  Configure the Home Router (Your Edge Router)
@@ -54,7 +54,7 @@ This means the ISP router gateway IP is 203.0.113.1.
 -  ip address 203.0.113.2 255.255.255.0
 -  no shutdown
 -  exit
-The Home Router’s WAN IP is 203.0.113.2.
+-  The Home Router’s WAN IP is 203.0.113.2.
 -  **Set the Default Route on the Home Router**
 -  Now, tell the Home Router to send all unknown traffic to the ISP Router:
   -  ip route 0.0.0.0 0.0.0.0 203.0.113.1  (This means all traffic destined for the internet will go to 203.0.113.1 (ISP Router).)
@@ -66,7 +66,7 @@ The Home Router’s WAN IP is 203.0.113.2.
   -  ip address 192.168.1.1 255.255.255.0
   -  no shutdown
   -  exit
-This creates a LAN subnet (192.168.1.0/24) for devices connected to the switch.
+-  This creates a LAN subnet (192.168.1.0/24) for devices connected to the switch.
 
 -  ![](https://i.imgur.com/VTFuPBv.png)
 
@@ -82,7 +82,7 @@ The ISP router needs to know how to reach the Home Router’s LAN, thus add:
 -  Check the routing table on the Home Router:
 -  Go to privileged mode
 -  show ip route
-You should see a default route (0.0.0.0/0) pointing to 203.0.113.1.
+-  You should see a default route (0.0.0.0/0) pointing to 203.0.113.1.
 
 Ping the ISP Router from the Home Router:
 -  ping 203.0.113.1
