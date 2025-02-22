@@ -45,6 +45,7 @@ Since the ISP router provides internet access, we will assign public IP addresse
 -  ip address 203.0.113.1 255.255.255.0
 -  no shutdown
 -  exit
+-  copy running-config startup-config (privileged mode)
 -  This means the ISP router gateway IP is 203.0.113.1.
 -   ![](https://i.imgur.com/yDDwQE7.png)
 
@@ -58,6 +59,7 @@ Since the ISP router provides internet access, we will assign public IP addresse
 -  **Set the Default Route on the Home Router**
 -  Now, tell the Home Router to send all unknown traffic to the ISP Router:
   -  ip route 0.0.0.0 0.0.0.0 203.0.113.1  (This means all traffic destined for the internet will go to 203.0.113.1 (ISP Router).)
+  -   copy running-config startup-config (privileged mode)
 -  ![](https://i.imgur.com/VTFuPBv.png)
 
 **Configure LAN Interface on Home Router (For Internal Network)**
@@ -66,6 +68,7 @@ Since the ISP router provides internet access, we will assign public IP addresse
   -  ip address 192.168.1.1 255.255.255.0
   -  no shutdown
   -  exit
+  -  copy running-config startup-config (privileged mode)
 -  This creates a LAN subnet (192.168.1.0/24) for devices connected to the switch.
 
 -  ![](https://i.imgur.com/VTFuPBv.png)
@@ -73,6 +76,7 @@ Since the ISP router provides internet access, we will assign public IP addresse
 ###  Set Up Routing on ISP Router (If Needed)
 The ISP router needs to know how to reach the Home Router’s LAN, thus add:
 -  ip route 192.168.1.0 255.255.255.0 203.0.113.2
+-  copy running-config startup-config (privileged mode)
 -  This tells the ISP router that 192.168.1.0/24 is behind 203.0.113.2 (Home Router).
 
 ### Final Network Setup After Configuration:
