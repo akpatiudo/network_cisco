@@ -128,3 +128,7 @@ The ping command shows:
 ### ICMP SIMULATION PANEL
 this is a snippet of network activities that was captured during the pinging 
 -  ![](https://i.imgur.com/6qjtpBY.png)
+
+
+click [here](https://github.com/akpatiudo/networksimulation) for part two
+
